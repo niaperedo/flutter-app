@@ -7,10 +7,23 @@ class ChooseLocation extends StatefulWidget {
 class _ChooseLocationState extends State<ChooseLocation> {
   int counter = 0;
 
+  void getData() async {
+     String username = await Future.delayed(Duration(seconds: 3), () {
+      return 'yoshi';
+    });
+
+     String bio = await Future.delayed(Duration(seconds: 3), () {
+       return 'noshi';
+     });
+
+     print('$username - bio');
+  }
+
   @override
   void initState() {
     super.initState();
-    print('Init State');
+    getData();
+    print('hey there!');
   }
 
   @override
